@@ -10,6 +10,16 @@
 </head>
 <body>
 
+<form action="A-T-Crawfish/adminlogin.php" method="post">
+<label for="username" name="uname">Username:</label>
+<input type="text" placeholder=""><br>
+<label for="password" name="pass">Password:</label>
+<input type="text" placeholder=""><br>
+<label for="password" name="cpass">Confirm Password:</label>
+<input type="text" placeholder=""><br>
+<input type="submit" value="Submit">
+
+</form>
 
 
 
