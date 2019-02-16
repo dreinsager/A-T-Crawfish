@@ -12,5 +12,4 @@ if (empty($username) || empty($password) || empty($passrepeat)) {
     exit();
 
 }
-
-}
+    }
