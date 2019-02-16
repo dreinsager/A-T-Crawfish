@@ -10,16 +10,17 @@
 </head>
 <body>
 
-<form action="A-T-Crawfish/adminlogin.php" method="post">
-<label for="username" name="uname">Username:</label>
-<input type="text" placeholder=""><br>
-<label for="password" name="pass">Password:</label>
-<input type="text" placeholder=""><br>
-<label for="password" name="cpass">Confirm Password:</label>
-<input type="text" placeholder=""><br>
-<input type="submit" value="Submit">
+<form action="errors.php" method="post">
+<label for="username">Username:</label>
+<input type="text" name="uname" placeholder="Enter Username"><br>
+<label for="password">Password:</label>
+<input type="text"  name="pass" placeholder="Passsword"><br>
+<label for="password">Confirm Password:</label>
+<input type="text"  name="cpass" placeholder=" Re-Enter Passsword"><br>
+<button type="submit" name="register">Register</button>
 
 </form>
+
 
 
 
