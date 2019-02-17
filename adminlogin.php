@@ -11,15 +11,14 @@
 <body>
 
 <form action="adminindex.php" method="post">
-<label for="username" name="uname">Username:</label>
-<input type="text" placeholder=""><br>
-<label for="password" name="pass">Password:</label>
-<input type="text" placeholder=""><br>
-<button type="submit">Login</button><br>
+    <label for="username" name="uname">Username:</label>
+        <input type="text" placeholder=""><br>
+    <label for="password" name="pass">Password:</label>
+        <input type="text" placeholder=""><br>
+    <button type="submit" name="login">Login</button><br>
 </form>
-
 <form action="registeradmin.php" method="post">
-<button type="submit">Register</button>
+    <button type="submit">Register</button>
 </form>
 
 

@@ -11,14 +11,13 @@
 <body>
 
 <form action="errors.php" method="post">
-<label for="username">Username:</label>
-<input type="text" name="uname" placeholder="Enter Username"><br>
-<label for="password">Password:</label>
-<input type="text"  name="pass" placeholder="Passsword"><br>
-<label for="password">Confirm Password:</label>
-<input type="text"  name="cpass" placeholder=" Re-Enter Passsword"><br>
-<button type="submit" name="register">Register</button>
-
+    <label for="username">Username:</label>
+    <input type="text" name="uname" placeholder="Enter Username"><br>
+    <label for="password">Password:</label>
+    <input type="text"  name="pass" placeholder="Passsword"><br>
+    <label for="password">Confirm Password:</label>
+    <input type="text"  name="cpass" placeholder=" Re-Enter Passsword"><br>
+    <button type="submit" name="register">Register</button>
 </form>
 
 

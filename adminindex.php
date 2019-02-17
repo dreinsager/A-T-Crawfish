@@ -10,6 +10,9 @@
 </head>
 <body>
 
+<form action="adminindex.php" method="post">
+    <button type="submit">Logout</button>
+</form>
 
 
 
