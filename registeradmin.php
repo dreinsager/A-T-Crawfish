@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form action="errors.php" method="post">
+<form action="register.php" method="post">
     <label for="username">Username:</label>
     <input type="text" name="uname" placeholder="Enter Username"><br>
     <label for="password">Password:</label>
