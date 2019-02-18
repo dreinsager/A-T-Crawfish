@@ -9,7 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php 
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == "emptyfields") {
+            echo '<p>Please fill in all fields!</p>';
+        }
+        else if ($_GET['error'] == "invaliduname") {
+            echo '<p>Invalid Username entered!</p>';
 
+        }
+        else if ($_GET['error'] == "pwdcheck") {
+            echo '<p>Passwords do not match!</p>';
+
+        }
+        else if ($_GET['error'] == "useralreadyexists") {
+            echo '<p>User already exists!</p>';
+
+        }
+    }
+    if (isset($_GET['signup'])){
+        if ($_GET['signup'] == "success"){
+            echo '<p>You have successfully registered!</p>';
+ 
+        }
+    }
+
+?>
 <form action="register.php" method="post">
     <label for="username">Username:</label>
     <input type="text" name="uname" placeholder="Enter Username"><br>

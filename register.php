@@ -54,7 +54,7 @@ else {
 
                 mysqli_stmt_bind_param($stmt, "ss", $username, $pwdhash);
                 mysqli_stmt_execute($stmt);
-                header("Location: registeradmin.php?register=success");
+                header("Location: registeradmin.php?signup=success");
                 exit();
 
             }

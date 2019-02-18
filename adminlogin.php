@@ -10,11 +10,12 @@
 </head>
 <body>
 
-<form action="adminindex.php" method="post">
-    <label for="username" name="uname">Username:</label>
-        <input type="text" placeholder=""><br>
-    <label for="password" name="pass">Password:</label>
-        <input type="text" placeholder=""><br>
+
+<form action="loginfunction.php" method="post">
+    <label for="username" >Username:</label>
+        <input type="text" name="uname" placeholder=""><br>
+    <label for="password" >Password:</label>
+        <input type="text" name="pass" placeholder=""><br>
     <button type="submit" name="login">Login</button><br>
 </form>
 <form action="registeradmin.php" method="post">
