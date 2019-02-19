@@ -35,15 +35,29 @@
     }
 
 ?>
+<div class="container">
 <form action="register.php" method="post">
-    <label for="username">Username:</label>
-    <input type="text" name="uname" placeholder="Enter Username"><br>
-    <label for="password">Password:</label>
-    <input type="text"  name="pass" placeholder="Passsword"><br>
-    <label for="password">Confirm Password:</label>
-    <input type="text"  name="cpass" placeholder=" Re-Enter Passsword"><br>
-    <button type="submit" name="register">Register</button>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="uname">
+</div>    
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
+</div>    
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Confirm Password:&nbsp;</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpass">
+</div>    
+    <button type="submit" class="btn btn-primary btn-lg btn-block" name="register">Register</button>
 </form>
+</div>
 
 
 

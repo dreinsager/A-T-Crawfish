@@ -16,7 +16,6 @@
         }
     }
 ?>
-
 <div class="container">
 <form action="loginfunction.php" method="post">
 <div class="input-group mb-3">
@@ -30,7 +29,8 @@
     <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
   </div>
   <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
-</div>    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
+</div>    
+<button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
     </form>
     <br>
 <form action="registeradmin.php" method="post">

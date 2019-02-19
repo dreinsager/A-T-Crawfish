@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +9,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<?php include 'adminheader.php'?>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="adminindex.php">
+    <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+    Administrator Access
+  </a>
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Add/Update Menu</a>
+  </li>
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">View Orders</a>
+  </li>
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+<form action="logout.php" method="post">
+    <button type="submit" class="btn btn-primary btn-sm btn-block">Logout</button>
+</form>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">
+    <?php 
+    if (isset($_SESSION['id'])) {
+        echo '<p>You are logged in!</p>';
+    }
+    else {
+        header("Location: adminlogin.php");
+        exit();
+
+    }
+    ?>
+    </a>
+  </li>
+  
+</nav>
 
 
 
