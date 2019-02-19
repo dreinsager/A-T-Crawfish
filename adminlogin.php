@@ -9,18 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == "emptyfields") {
+            echo '<p>Please fill in all fields!</p>';
+        }
+    }
+?>
 
-
+<div class="container">
 <form action="loginfunction.php" method="post">
-    <label for="username" >Username:</label>
-        <input type="text" name="uname" placeholder=""><br>
-    <label for="password" >Password:</label>
-        <input type="text" name="pass" placeholder=""><br>
-    <button type="submit" name="login">Login</button><br>
-</form>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="uname">
+</div>    
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
+</div>    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
+    </form>
+    <br>
 <form action="registeradmin.php" method="post">
-    <button type="submit">Register</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
 </form>
+</div>
+
 
 
 
