@@ -20,7 +20,7 @@
   </li>
   <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" href="#">View Orders</a>
+    <a class="nav-link active" href="vieworder.php">View Orders</a>
   </li>
   <ul class="nav justify-content-end">
   <li class="nav-item">
