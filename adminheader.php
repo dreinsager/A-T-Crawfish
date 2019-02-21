@@ -16,7 +16,7 @@
   </a>
   <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Add/Update Menu</a>
+    <a class="nav-link active" href="adminmenu.php">Add/Update Menu</a>
   </li>
   <ul class="nav justify-content-end">
   <li class="nav-item">
@@ -30,7 +30,13 @@
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">
-    <?php 
+ 
+    </a>
+  </li>
+</nav>
+
+
+ <?php 
     if (isset($_SESSION['id'])) {
         echo '<p>You are logged in!</p>';
     }
@@ -40,13 +46,6 @@
 
     }
     ?>
-    </a>
-  </li>
-  
-</nav>
-
-
-
 
 
 
