@@ -2,16 +2,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Administrator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php require '../DB/connect.php' ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Administrator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <?php include 'adminheader.php'?>
+<?php require '../DB/connect.php' ?>
 
+
+
+
+
+
+
+<form action="news.php" METHOD="POST">
+    <div class="from-group">
+        <label>Title:</label>
+        <input type="text" class="from-control"  name="title" ><br><br>
+    </div>
+    <div class="form-group">
+        <label>Enter Announcement:</label>
+        <textarea class="form-control" rows="3" name="news"></textarea>
+    </div>
+    <div class="from-group">
+    <button type="submit" name="enter" class="btn btn-primary btn-lg btn-block">Submit</button>
+    </div>
+</form>
 
 
 
