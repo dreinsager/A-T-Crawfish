@@ -11,14 +11,7 @@
 </head>
 <body>
 <?php include 'adminheader.php'?>
-<?php require '../DB/connect.php' ?>
-
-
-
-
-
-
-
+<div class="container">
 <form action="news.php" METHOD="POST">
     <div class="from-group">
         <label>Title:</label>
@@ -31,9 +24,48 @@
     <div class="from-group">
     <button type="submit" name="enter" class="btn btn-primary btn-lg btn-block">Submit</button>
     </div>
-</form>
+</form><br>
+</div>
+<?php 
+$result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
+?>
+<?php 
+    if (isset($_SESSION['message'])): ?>
+<div class="container alert alert-<?=$_SESSION['msg_type']?>">
+<?php 
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+?>
+</div>
+<?php endif ?>
 
+<div class="container">
+<div class="row justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>News</th>
+                <th colspan="2">Edit/Delete</th>
+            </tr>
+        </thead>
+    <?php
+        while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td><?php echo $row['title']; ?></td>
+            <td><?php echo $row['news']; ?></td>
+            <td>
+                <a href="adminindex.php?edit=<?php echo $row['id'];?>"
+                    class = "btn btn-info">Edit</a>
+                <a href="news.php?delete=<?php echo $row['id'];?>"
+                    class = "btn btn-danger">Delete</a>
 
+            </td>
+        </tr>
+    <?php endwhile; ?>
+    </table>
+</div>
+</div>
 
 
 

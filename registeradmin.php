@@ -36,6 +36,10 @@
 
 ?>
 <div class="container">
+<div class="row justify-content-center">
+<img src="img/logo.jpg" width="300" height="300" class="d-inline-block align-top" alt="">
+</div>
+<div class="row justify-content-center">
 <form action="register.php" method="post">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
@@ -57,6 +61,7 @@
 </div>    
     <button type="submit" class="btn btn-primary btn-lg btn-block" name="register">Register</button>
 </form>
+</div>
 </div>
 
 

@@ -49,7 +49,7 @@ else {
                 exit();
                 }
             else {
-                //Hashing the password using decrypt.. automatically updates
+                //Hashing the password using Bcrypt.. automatically updates
                 $pwdhash = password_hash($password, PASSWORD_DEFAULT);
 
                 mysqli_stmt_bind_param($stmt, "ss", $username, $pwdhash);
