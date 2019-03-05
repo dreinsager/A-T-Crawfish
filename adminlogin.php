@@ -17,31 +17,31 @@
     }
 ?>
 <div class="container">
-<div class="row justify-content-center">
-<div class="justyify-content-center">
-<img src="img/logo.jpg" width="300" height="300" class="d-inline-block align-top" alt="">
+  <div class="row justify-content-center">
+    <div class="justyify-content-center">
+    <img src="img/logo.jpg" width="300" height="300" class="d-inline-block align-top" alt="">
 
-<form action="loginfunction.php" method="post">
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="uname">
-</div>    
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
-</div>    
-<button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
+    <form action="loginfunction.php" method="post">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="uname">
+    </div>    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
+    </div>    
+    <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
+        </form>
+        <br>
+    <form action="registeradmin.php" method="post">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
     </form>
-    <br>
-<form action="registeradmin.php" method="post">
-    <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-</form>
-</div>
-</div>
+    </div>
+  </div>
 </div>
 
 
