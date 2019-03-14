@@ -12,6 +12,16 @@
 <body>
 <?php include 'adminheader.php'?>
 <div class="container">
+<?php
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == "emptyfields") {
+            echo '<div class="alert alert-danger" role="alert">';
+            echo '<p>Please fill in all fields!</p>';
+            echo '</div>';
+
+        }
+    }
+?>
 <form action="news.php" METHOD="POST">
     <div class="from-group">
         <label>Title:</label>
@@ -38,6 +48,7 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
 ?>
 </div>
 <?php endif ?>
+
 
 <div class="container">
 <div class="row justify-content-center">
