@@ -10,6 +10,11 @@ session_start();
 
         $sql = "INSERT INTO news (title, news) VALUES (?, ?)";
         $stmt = mysqli_stmt_init($mysqli);
+        if(empty($title) || empty($news)) {
+            echo 'Please enter all fields!';
+            header("Location: adminindex.php?error=emptyfields");
+            exit();
+        }
         if (mysqli_stmt_prepare($stmt, $sql)) {
             mysqli_stmt_bind_param($stmt, "ss", $title, $news);
             mysqli_stmt_execute($stmt);
@@ -17,9 +22,12 @@ session_start();
             header("Location: adminindex.php");
             exit();
             }
+           
+            
 mysqli_stmt_close($stmt);
 mysqli_close($mysqli);
 }
+
 
     if (isset($_GET['delete'])){
         $id = $_GET['delete'];
