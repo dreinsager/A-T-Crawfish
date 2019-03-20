@@ -1,5 +1,4 @@
-<?php session_start(); 
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,11 +26,11 @@
 <form action="news.php" METHOD="POST">
     <div class="form-group">
         <label>Title:</label>
-        <input type="text" class="form-control" name="title"  value="<?php echo $title; ?>" placeholder="Enter Title"><br><br>
+        <input type="text" class="form-control" name="title"><br><br>
     </div>
     <div class="form-group">
         <label>Enter Announcement:</label>
-        <textarea class="form-control" rows="3" value="<?php echo (isset($row['news'])&&!empty($row['news'])) ? $row['news'] : ''; ?>" name="news" ></textarea>
+        <textarea class="form-control" rows="3" value="" name="news"></textarea>
     </div>
     <div class="form-group">
     <button type="submit" name="enter" class="btn btn-primary btn-lg btn-block">Submit</button>

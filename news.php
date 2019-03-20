@@ -1,8 +1,5 @@
-<?php require '../DB/connect.php' 
-?>
+<?php require '../DB/connect.php' ?>
 <?php
-
-
 session_start();
 
     if (isset($_POST['enter'])){
