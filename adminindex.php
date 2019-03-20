@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,22 +23,23 @@
         }
     }
 ?>
+
 <form action="news.php" METHOD="POST">
-    <div class="from-group">
+    <div class="form-group">
         <label>Title:</label>
-        <input type="text" class="from-control"  name="title" ><br><br>
+        <input type="text" class="form-control" name="title"  value="<?php echo $title; ?>" placeholder="Enter Title"><br><br>
     </div>
     <div class="form-group">
         <label>Enter Announcement:</label>
-        <textarea class="form-control" rows="3" name="news"></textarea>
+        <textarea class="form-control" rows="3" value="<?php echo (isset($row['news'])&&!empty($row['news'])) ? $row['news'] : ''; ?>" name="news" ></textarea>
     </div>
-    <div class="from-group">
+    <div class="form-group">
     <button type="submit" name="enter" class="btn btn-primary btn-lg btn-block">Submit</button>
     </div>
 </form><br>
 </div>
 <?php 
-$result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
+$result = $mysqli->query("SELECT * FROM news") or die($mysqli->error());
 ?>
 <?php 
     if (isset($_SESSION['message'])): ?>

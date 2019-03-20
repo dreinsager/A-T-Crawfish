@@ -1,6 +1,10 @@
-<?php require '../DB/connect.php' ?>
+<?php require '../DB/connect.php' 
+?>
 <?php
+
+
 session_start();
+
     if (isset($_POST['enter'])){
         $title = $_POST['title'];
         $news = $_POST['news'];
@@ -28,7 +32,6 @@ mysqli_stmt_close($stmt);
 mysqli_close($mysqli);
 }
 
-
     if (isset($_GET['delete'])){
         $id = $_GET['delete'];
         $mysqli->query("DELETE FROM news WHERE id=$id") or die($mysqli->error());
@@ -41,3 +44,5 @@ mysqli_close($mysqli);
         exit();
 
     }
+
+
