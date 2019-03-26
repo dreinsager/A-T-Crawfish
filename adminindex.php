@@ -11,6 +11,20 @@
 </head>
 <body>
 <?php include 'adminheader.php'?>
+<?php  
+  if (isset($_POST['newtitle'])){
+        $newtitle = $_POST['newtitle'];
+        $id = $_POST['id'];
+        $mysqli->query("UPDATE news SET title='$newtitle' WHERE id='$id'") or die($mysqli->error);
+
+    }
+    if (isset($_POST['newnews'])){
+        $newnews = $_POST['newnews'];
+        $id = $_POST['id'];
+        $mysqli->query("UPDATE news SET news='$newnews' WHERE id='$id'") or die($mysqli->error);
+
+    }
+?>
 <div class="container">
 <?php
     if (isset($_GET['error'])) {
@@ -51,6 +65,7 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error());
 <?php endif ?>
 
 
+
 <div class="container">
 <div class="row justify-content-center">
     <table class="table">
@@ -67,7 +82,7 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error());
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['news']; ?></td>
             <td>
-                <a href="adminindex.php?edit=<?php echo $row['id'];?>"
+                <a href="newsedit.php?edit=<?php echo $row['id'];?>"
                     class = "btn btn-info">Edit</a>
                 <a href="news.php?delete=<?php echo $row['id'];?>"
                     class = "btn btn-danger">Delete</a>

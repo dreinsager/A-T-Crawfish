@@ -67,7 +67,7 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
         <thead>
             <tr>
                 <th>Product</th>
-                <th>Price/lb</th>
+                <th>Price</th>
                 <th colspan="2">Edit/Delete</th>
             </tr>
         </thead>
