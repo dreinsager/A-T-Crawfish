@@ -11,21 +11,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-<img src="../img/logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="">&nbsp;
-  <a class="navbar-brand" href="#">Welcome to A&T Crawfish</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Gallery</a>
-      <a class="nav-item nav-link" href="#">Menu</a>
-      <a class="nav-item nav-link" href="#">Order</a>
+<?php include 'custheader.php'?>
 
-    </div>
-  </div>
-</nav>
 </body>
 </html>
