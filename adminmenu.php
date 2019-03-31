@@ -62,9 +62,8 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
 </div>
 <?php endif ?>
 
-
-<div class="container">
 <div class="row justify-content-center">
+<div class="container">
     <table class="table">
         <thead>
             <tr>
