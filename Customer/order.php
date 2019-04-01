@@ -53,7 +53,7 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
 </div>
 
 
-  <button type="submit" name="submit" class="btn btn-dark btn-lg btn-block">Submit</button><br>
+<button type="submit" name="submit" class="btn btn-dark btn-lg btn-block">Submit</button><br>
 </div>
 </form>
 </div>
