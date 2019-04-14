@@ -13,7 +13,6 @@
 <body>
 <?php
     if (isset($_POST['submit'])){
-
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $phone = $_POST['phone'];
@@ -21,8 +20,16 @@
         $qty = $_POST['qty'];
         $item = $_POST['item'];
 
-        echo '<input type="hidden" name="fname" value="<?php echo $fname; ?>" />';
 
+
+        ini_set("SMTP","aspmx.l.google.com");
+        $message = 'Name: ' . $_POST['fname'] . ' ' . $_POST['lname'] . "\r\n\r\n"; 
+        $message .= 'Phone: ' . $_POST['phone'] . "";
+
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+        $headers .= "From: a&tcrawfish@gmail.com" . "\r\n";
+        mail("dreinsager@gmail.com","Order Placed",$message,$headers);
 
         $_SESSION['message'] = "Order Successfully Added!";
         $_SESSION['msg_type'] = "success";
@@ -38,16 +45,32 @@
             mysqli_stmt_bind_param($stmt, "ssssss", $fname, $lname, $phone, $email, $qty, $item);
             mysqli_stmt_execute($stmt);          
             }
+
+    
                
             
               
 mysqli_stmt_close($stmt);
 mysqli_close($mysqli);
 }
-?><br>
-<h1>Thank you for your Order</h1>
+?>
+<div class="alert alert-primary" role="alert">
+<h1>Thank you for your Order!</h1>
+</div>
 
-
+<div class="row justify-content-center">
+    <label>Name:&nbsp; <?php echo $fname?>&nbsp;<?php echo $lname; ?><br><br>
+    <label>Phone Number:&nbsp; <?php echo $phone?><br><br>
+    <label>E-Mail:&nbsp; <?php echo $email;?><br><br>
+    <label>Item:&nbsp; <?php echo $item?><br><br>
+    <label>Quantity:&nbsp; <?php echo $qty?><br><br>
+    <a class="btn btn-primary" href="custindex.php" role="button">Return to Home Page</a>
+</div>
+<style>
+    h1 {
+        text-align: center;
+    }
+</style>
 </body>
 </html>
 
