@@ -18,9 +18,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <label>First Name:</label>
       <input type="text" name="fname" class="form-control" placeholder="First name">
     </div>
     <div class="col">
+      <label>Last Name:</label>
       <input type="text" name="lname" class="form-control" placeholder="Last name">
     </div>
   </div>
@@ -28,10 +30,12 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+      <label>Phone Number:</label>
+      <input type="text" name="phone" class="form-control" placeholder="(xxx)xxx-xxxx">
     </div>
     <div class="col">
-      <input type="text" name="email" class="form-control" placeholder="Email">
+      <label>Email:</label>
+      <input type="text" name="email" class="form-control" placeholder="billybob@domain.com">
     </div>
   </div><br>
 <?php 
@@ -47,16 +51,16 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
     </select><br><br>
         </div>
         <div class="col">
+            <label>Enter Quantity:</label>
             <input type="text" name="qty" class="form-control" placeholder="Enter Quantity">
         </div>
     </div>
 </div>
-
-
 <button type="submit" name="submit" class="btn btn-dark btn-lg btn-block">Submit</button><br>
 </div>
 </form>
 </div>
+
 
 </body>
 </html>
