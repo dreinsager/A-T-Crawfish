@@ -13,5 +13,9 @@
 <body>
 <?php include 'custheader.php'?>
 
+
+
+
+<?php include 'custfooter.php'?>
 </body>
 </html>

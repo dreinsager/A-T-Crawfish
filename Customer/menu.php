@@ -11,6 +11,7 @@
     <script src="main.js"></script>
 </head>
 <body>
+<?php include 'custfooter.php'?>
 
 <?php include 'custheader.php'?><br>
 <div class="row justify-content-center">
