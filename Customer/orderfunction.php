@@ -23,9 +23,11 @@
 
 
         ini_set("SMTP","aspmx.l.google.com");
-        $message = 'Name: ' . $_POST['fname'] . ' ' . $_POST['lname'] . "\r\n\r\n"; 
-        $message .= 'Phone: ' . $_POST['phone'] . "";
-
+        $message = "<html><body>";
+        $message .= 'Name: ' . $_POST['fname'] . ' ' . $_POST['lname'] . "\r\n\r\n";
+        $message .= "<br>";
+        $message .= 'Phone: ' . $_POST['phone'] . "\r\n\r\n";
+        $message .= "</body></html>";
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
         $headers .= "From: a&tcrawfish@gmail.com" . "\r\n";
