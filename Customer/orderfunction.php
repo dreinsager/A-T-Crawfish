@@ -25,7 +25,7 @@
             header("Location: order.php?error=emptyfields");
             exit();
         }
-        if(filter_var($email, FILTER_VALIDATE_EMAIL) !== true) {
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
             header("Location: order.php?error2=invalidemail");
             exit();
         }
