@@ -13,7 +13,21 @@
 <body>
 <?php include 'custfooter.php'?>
 
-<?php include 'custheader.php'?><br><br><br>
+<?php include 'custheader.php'?><br><br>
+<?php
+if (isset($_GET['error'])) {
+            echo '<div class="row justify-content-center alert alert-danger" role="alert"';
+            echo '<p>Please fill in all fields!</p>';
+            echo '</div>';
+        }
+?>
+<?php
+if (isset($_GET['error2'])) {
+    echo '<div class="row justify-content-center alert alert-danger" role="alert"';
+            echo '<p>Please input a valid e-mail!</p>';
+            echo '</div>';
+        }
+?>
 
 <div class="row justify-content-center">
 <form action="orderfunction.php" method="POST">

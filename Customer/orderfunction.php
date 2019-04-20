@@ -13,6 +13,7 @@
 <body>
 <?php
     if (isset($_POST['submit'])){
+
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $phone = $_POST['phone'];
@@ -20,17 +21,22 @@
         $qty = $_POST['qty'];
         $item = $_POST['item'];
 
+        if(empty($fname) || empty($lname) || empty($phone) || empty($email) || empty($qty) || empty($item)) {
+            header("Location: order.php?error=emptyfields");
+            exit();
+        }
+        if(filter_var($email, FILTER_VALIDATE_EMAIL) !== true) {
+            header("Location: order.php?error2=invalidemail");
+            exit();
+        }
 
 
-        ini_set("SMTP","aspmx.l.google.com");
-        $message = "<html><body>";
-        $message .= 'Name: ' . $_POST['fname'] . ' ' . $_POST['lname'] . "\r\n\r\n";
-        $message .= "<br>";
+        $message = 'Name: ' . $_POST['fname'] . ' ' . $_POST['lname'] . "\r\n\r\n";
         $message .= 'Phone: ' . $_POST['phone'] . "\r\n\r\n";
-        $message .= "</body></html>";
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-        $headers .= "From: a&tcrawfish@gmail.com" . "\r\n";
+        $message .= 'Email: ' . $_POST['email'] . "\r\n\r\n";
+        $message .= 'Quantity: ' . $_POST['qty'] . "\r\n\r\n";
+        $message .= 'Product: ' . $_POST['item'] . "\r\n\r\n";
+        $headers = "From: dreinsager@gmail.com" . "\r\n";
         mail("dreinsager@gmail.com","Order Placed",$message,$headers);
 
         $_SESSION['message'] = "Order Successfully Added!";
@@ -38,11 +44,6 @@
 
         $sql = "INSERT INTO orders (fname, lname, phone, email, qty, item) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($mysqli);
-        if(empty($fname) || empty($lname) || empty($phone) || empty($email) || empty($qty) || empty($item)) {
-            echo 'Please enter all fields!';
-            header("Location: order.php?error=emptyfields");
-            exit();
-        }
         if (mysqli_stmt_prepare($stmt, $sql)) {
             mysqli_stmt_bind_param($stmt, "ssssss", $fname, $lname, $phone, $email, $qty, $item);
             mysqli_stmt_execute($stmt);          

@@ -10,7 +10,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-<?php include 'custheader.php'?><br>
+<?php include 'custheader.php'?><br><br><br>
 <div class="row justify-content-center">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 25rem;">
   <div class="carousel-inner">

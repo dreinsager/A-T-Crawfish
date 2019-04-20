@@ -21,11 +21,11 @@
                     <a class="nav-item nav-link" href="about.php">About</a>
                     <a class="nav-item nav-link" href="contact.php">Contact</a>
                     <a class="nav-item nav-link" href="location.php">Locations</a>
+                    <a target="_blank" href="https://www.facebook.com/pages/category/Restaurant/AT-Crawfish-Company-276019415891067/">       <img src="../img/fbk.png" width="37" height="40" class="fbk" alt="facebook"></a>&nbsp;
                </div>
             </div>
         </nav>
     </div>
 </footer>
-
 </body>
 </html>
