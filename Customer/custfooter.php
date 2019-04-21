@@ -18,6 +18,7 @@
             <div class="justify-content-center">
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+                    <img src="../img/cards.png" width="200" height="40" alt="cards">&nbsp;
                     <a class="nav-item nav-link" href="about.php">About</a>
                     <a class="nav-item nav-link" href="contact.php">Contact</a>
                     <a class="nav-item nav-link" href="location.php">Locations</a>
