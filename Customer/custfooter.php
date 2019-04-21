@@ -18,9 +18,9 @@
             <div class="justify-content-center">
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="contact.php">Contact Us: (662)509-2088/(662)419-9075</a>
                     <img src="../img/cards.png" width="200" height="40" alt="cards">&nbsp;
                     <a class="nav-item nav-link" href="about.php">About</a>
-                    <a class="nav-item nav-link" href="contact.php">Contact</a>
                     <a class="nav-item nav-link" href="location.php">Locations</a>
                     <a target="_blank" href="https://www.facebook.com/pages/category/Restaurant/AT-Crawfish-Company-276019415891067/">       <img src="../img/fbk.png" width="37" height="40" class="fbk" alt="facebook"></a>&nbsp;
                </div>

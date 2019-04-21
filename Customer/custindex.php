@@ -11,10 +11,30 @@
     <script src="main.js"></script>
 </head>
 <body>
-<?php include 'custheader.php'?>
+<?php include 'custheader.php'?><br><br>
 
+<div class="row justify-content-center">
 
+<?php 
+$result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
+?>
 
+<div class="container">
+<div class="row justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>News</th>
+            </tr>
+        </thead>
+    <?php
+        while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td><?php echo $row['title']; ?></td>
+            <td><?php echo $row['news']; ?></td>
+        </tr>
+<?php endwhile; ?>
 
 <?php include 'custfooter.php'?>
 </body>

@@ -41,5 +41,19 @@ mysqli_close($mysqli);
         exit();
 
     }
+    if (isset($_GET['delete2'])){
+        $id = $_GET['delete2'];
+        $mysqli->query("DELETE FROM orders WHERE id=$id") or die($mysqli->error());
+
+        $_SESSION['message'] = "Information Successfully Deleted!";
+        $_SESSION['msg_type'] = "danger";
+
+
+        header("Location: vieworder.php");
+        exit();
+
+    }
+
+
 
 

@@ -39,6 +39,7 @@ $result = $mysqli->query("SELECT * FROM orders") or die($mysqli->error);
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Confirm</th>
+                <th>Delete</th>
             </tr>
         </thead>
     <?php
@@ -49,10 +50,10 @@ $result = $mysqli->query("SELECT * FROM orders") or die($mysqli->error);
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['item']; ?></td>
             <td><?php echo $row['qty']; ?></td>
-            <td>                 
-                <button class="btn btn-danger">Confirm</button>
-                
-            </td>
+            <td><button class="btn btn-danger">Confirm</button></td>
+            <td>                <a href="news.php?delete2=<?php echo $row['id'];?>"
+                    class = "btn btn-primary">Delete</a></td>
+
 
         </tr>
     <?php endwhile; ?>
