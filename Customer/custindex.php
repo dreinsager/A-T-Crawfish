@@ -24,14 +24,12 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
     <table class="table">
         <thead>
             <tr>
-                <th>Title</th>
                 <th>News</th>
             </tr>
         </thead>
     <?php
         while ($row = $result->fetch_assoc()): ?>
         <tr>
-            <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['news']; ?></td>
         </tr>
 <?php endwhile; ?>

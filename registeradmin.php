@@ -30,6 +30,7 @@
     if (isset($_GET['signup'])){
         if ($_GET['signup'] == "success"){
             echo '<p>You have successfully registered!</p>';
+            echo'<a href="adminlogin.php">Click Here</a> to return to Login page';
  
         }
     }
@@ -51,13 +52,13 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
   </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
+  <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
 </div>    
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Confirm Password:&nbsp;</span>
   </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpass">
+  <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="cpass">
 </div>    
     <button type="submit" class="btn btn-primary btn-lg btn-block" name="register">Register</button>
 </form>

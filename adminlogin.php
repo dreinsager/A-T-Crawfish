@@ -32,7 +32,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">Password:&nbsp;</span>
       </div>
-      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
+      <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="pass">
     </div>    
     <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Login</button>
         </form>
