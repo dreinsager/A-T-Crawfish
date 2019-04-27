@@ -45,7 +45,7 @@
         $sql = "INSERT INTO orders (fname, lname, phone, email, qty, item) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($mysqli);
         if (mysqli_stmt_prepare($stmt, $sql)) {
-            mysqli_stmt_bind_param($stmt, "ssssss", $fname, $lname, $phone, $email, $qty, $item);
+            mysqli_stmt_bind_param($stmt, "ssssis", $fname, $lname, $phone, $email, $qty, $item);
             mysqli_stmt_execute($stmt);          
             }
 
