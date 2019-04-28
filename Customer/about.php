@@ -2,6 +2,7 @@
 <html>
 <head>
     <?php require '../../DB/connect.php' ?>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About Us</title>
@@ -11,18 +12,33 @@
     <script src="main.js"></script>
 </head>
 <body>
-<?php include 'custheader.php'?>
+<?php include 'custheader.php'?><br>
+<div class="container"><h1>About Us</h1><br></div>
 <div class="row justify-content-center">
-
     <div class="card" style="width: 18rem;">
     <img src="../img/trailer.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h2 class="card-title">About Us</h2>
-        <p class="card-text">A&T Crawfish Company sells live and cooked crawfish as well as other products in multiple locations. Each week we go down to Louisiana to get the freshest seafood possible. We normally have crawfish ready to eat at around 11 in the morning until its dark that afternoon. Whether you need one pound or 100 pounds we have got you covered.
-        Please view our menu for more options of what we offer! Feel free to call us for any estimates on parties, dinners, gatherings or any other events you may have planned.</p>
+        <div class="card-body">
+            <h2 class="card-title">What we do</h2>
+            <p class="card-text">A&T Crawfish Company sells live and cooked crawfish as well as other products in multiple locations. Each week we go down to Louisiana to get the freshest seafood possible. We normally have crawfish ready to eat at around 11 in the morning until its dark that afternoon. Whether you need one pound or 100 pounds we have got you covered.
+            Please view our menu for more options of what we offer! Feel free to call us for any estimates on parties, dinners, gatherings or any other events you may have planned.</p>
+        </div>
+    </div>&nbsp;&nbsp;&nbsp;
+    <div class="card" style="width: 20rem; height: 50rem;">
+    <img src="../img/cfish.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">Days Available</h2>
+            <p class="card-text">We are availe every weekend rain or shine during the season to proved the best product available. We usually set up between 10AM and when the sun goes down.</p>
+        </div>
     </div>
-    </div>
+
 </div>
+<style>
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+</style>
+
 <footer>
     <div class="">
         <nav class="nav justify-content-center navbar navbar-expand-lg navbar navbar-dark bg-dark">

@@ -23,12 +23,14 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error);
                 <thead>
                     <tr>
                         <th>News</th>
+                        <th>Date Posted</th>
                     </tr>
                 </thead>
             <?php
                 while ($row = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?php echo $row['news']; ?></td>
+                    <td><?php echo date('m-d-y') ?></td>
                 </tr>
                 <?php endwhile; ?>
         </div>

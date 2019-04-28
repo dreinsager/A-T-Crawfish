@@ -2,6 +2,7 @@
 <html>
 <head>
     <?php require '../../DB/connect.php' ?>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +29,7 @@ if (isset($_GET['error2'])) {
             echo '</div>';
         }
 ?>
-
+<div class="container"><h1>Oder From</h1><br></div>
 <div class="row justify-content-center">
 <form action="orderfunction.php" method="POST">
 <div class="container">
@@ -76,7 +77,12 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
 </div>
 </form>
 </div>
-
+<style>
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+</style>
 
 </body>
 </html>
