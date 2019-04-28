@@ -3,6 +3,7 @@
 <html>
 <head>
     <?php require '../DB/connect.php' ?>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
 </head>
 <body>
 <?php include 'adminheader.php'?>
+<div class="container"><h1>Customer Orders</h1><br></div>
 
 <div class="row justify-content-center">
 <?php 
@@ -69,6 +71,11 @@ $result = $mysqli->query("SELECT * FROM orders") or die($mysqli->error);
 .clicked {
   background-color: green;
 }
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

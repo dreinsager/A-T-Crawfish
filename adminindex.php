@@ -3,6 +3,7 @@
 <html>
 <head>
 <?php require '../DB/connect.php' ?>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
 </head>
 <body>
 <?php include 'adminheader.php'?>
+<div class="container"><h1>Add News</h1><br></div>
 <?php  
   if (isset($_POST['newtitle'])){
         $newtitle = $_POST['newtitle'];
@@ -36,7 +38,6 @@
         }
     }
 ?>
-
 <form action="news.php" METHOD="POST">
     <div class="form-group">
         <label>Title:</label>
@@ -63,51 +64,39 @@ $result = $mysqli->query("SELECT * FROM news") or die($mysqli->error());
 ?>
 </div>
 <?php endif ?>
-
-
-
 <div class="container">
-<div class="row justify-content-center">
-    <table class="table">
-        <thead>
+    <div class="row justify-content-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>News</th>
+                    <th colspan="2">Edit/Delete</th>
+                </tr>
+            </thead>
+        <?php
+            while ($row = $result->fetch_assoc()): ?>
             <tr>
-                <th>Title</th>
-                <th>News</th>
-                <th colspan="2">Edit/Delete</th>
+                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['news']; ?></td>
+                <td>
+                    <a href="newsedit.php?edit=<?php echo $row['id'];?>"
+                        class = "btn btn-info">Edit</a>
+                    <a href="news.php?delete=<?php echo $row['id'];?>"
+                        class = "btn btn-danger">Delete</a>
+
+                </td>
             </tr>
-        </thead>
-    <?php
-        while ($row = $result->fetch_assoc()): ?>
-        <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['news']; ?></td>
-            <td>
-                <a href="newsedit.php?edit=<?php echo $row['id'];?>"
-                    class = "btn btn-info">Edit</a>
-                <a href="news.php?delete=<?php echo $row['id'];?>"
-                    class = "btn btn-danger">Delete</a>
-
-            </td>
-        </tr>
-    <?php endwhile; ?>
-    </table>
+        <?php endwhile; ?>
+        </table>
+    </div>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<style>
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+</style>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

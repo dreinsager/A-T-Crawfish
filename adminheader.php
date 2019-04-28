@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +13,10 @@
     <img src="img/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
     Administrator Access
   </a>
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="adminindex.php">Home</a>
+  </li>
   <ul class="nav justify-content-end">
   <li class="nav-item">
     <a class="nav-link active" href="adminmenu.php">Add/Update Menu</a>

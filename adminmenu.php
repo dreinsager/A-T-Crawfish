@@ -3,7 +3,8 @@
 <html>
 <head>
 <?php require '../DB/connect.php' ?>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Add/Edit Menu</title>
@@ -11,6 +12,7 @@
 </head>
 <body>
 <?php include 'adminheader.php'?>
+<div class="container"><h1>Add to Menu</h1><br></div>
 <?php
     if (isset($_GET['error'])) {
         if ($_GET['error'] == "emptyfields") {
@@ -21,7 +23,6 @@
         }
     }
 ?>
-
 <?php  
   if (isset($_POST['newproduct'])){
         $newproduct = $_POST['newproduct'];
@@ -85,6 +86,12 @@ $result = $mysqli->query("SELECT * FROM item") or die($mysqli->error);
     <?php endwhile; ?>
     </table>
 </div>
+<style>
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+</style>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
