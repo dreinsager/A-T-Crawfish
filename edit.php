@@ -3,7 +3,8 @@
 <html>
 <head>
 <?php require '../DB/connect.php' ?>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Edit Menu</title>
@@ -12,6 +13,7 @@
     <script src="main.js"></script>
 </head>
 <body>
+<div class="container"><h1>Edit Menu</h1><br></div>
 <?php
     if (isset($_GET['edit'])) {
         $id = $_GET['edit'];
@@ -32,6 +34,12 @@
                 <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Update</button><br>
             </div>
     </form>
+    <style>
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+</style>
 
 </body>
 </html>

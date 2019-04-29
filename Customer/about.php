@@ -29,7 +29,14 @@
             <h2 class="card-title">Days Available</h2>
             <p class="card-text">We are availe every weekend rain or shine during the season to proved the best product available. We usually set up between 10AM and when the sun goes down.</p>
         </div>
-    </div>
+    </div>&nbsp;&nbsp;&nbsp;
+    <div class="card" style="width: 20rem; height: 50rem;">
+    <img src="../img/cater.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">Catering</h2>
+            <p class="card-text">We can cater any event!! Please feel free to contact us and ask us about how we can provide catering services.</p>
+        </div>
+    </div>&nbsp;&nbsp;&nbsp;
 
 </div>
 <style>

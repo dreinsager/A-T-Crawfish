@@ -14,16 +14,12 @@
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 
 <img src="../img/logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="">&nbsp;
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-
     <div class="navbar-nav">
-
-      <a class="nav-item nav-link" href="custindex.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="custindex.php" >Home</a>
       <a class="nav-item nav-link" href="gallery.php">Gallery</a>
       <a class="nav-item nav-link" href="menu.php">Menu</a>
       <a class="nav-item nav-link" href="order.php">Order</a>
     </div>
-</div>
 </nav>
 </body>
 </html>
